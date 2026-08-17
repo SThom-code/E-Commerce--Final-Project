@@ -1,0 +1,21 @@
+.image {
+    width: 20%; height: 20%;
+}
+
+.container {
+    background-color: aqua;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.subContainer {
+    background-color: aliceblue;
+    margin: 1rem;
+    padding: 1rem;
+    vertical-align: middle;
+    width: fit-content;
+}
+
+.subContainer:hover {
+    background-color: rgb(207, 214, 220);
+} 
