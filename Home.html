@@ -2,22 +2,8 @@
 <html>
     <head>
         <title>Home</title>
-        <style>
-            /*You can remove this style attribute whenever, it's just to see the containers and images in their proper sizes*/
-            .image {
-                width: 20%; height: 20%;
-            }
-            .container {
-                background-color: aqua;
-                margin: 1rem;
-                padding: 1rem;
-            }
-            .subContainer {
-                background-color: aliceblue;
-                margin: 1rem;
-                padding: 1rem;
-            }
-        </style>
+            <!--You can remove this style attribute whenever, it's just to see the containers and images in their proper sizes*/-->
+        <link rel="stylesheet" href="E-comStyle.css">
     </head>
     <body>
         <header>
@@ -26,16 +12,24 @@
         <!--Big text with Logo?-->
         <nav>
             <!--Should the Login Button and List to be to the side?-->
-            <a href="">My List</a>
             <a href="Login.html">Login</a>
+            <!--Only show my list after the person is logged in-->
+            <a href="Purchase.html">My List</a>
         </nav>
     <br>
         <h1>Products:</h1>
 
         <div class="container">
-            <div class="subContainer">
-                <a href="productPageTest.html"><img class="image" src="tshirt-2.jpg"></a>
-            </div>
+            <a href="productPageTest.html" title="Go to Product Page">
+                <div class="subContainer">
+                    <img class="image" src="tshirt-2.jpg">
+                </div>
+            </a>
+            <a href="productPageTest.html" title="Go to Product Page">
+                <div class="subContainer">
+                    <img class="image" src="tshirt-2.jpg">
+                </div>
+            </a>
         </div>
     </body>
 </html>
