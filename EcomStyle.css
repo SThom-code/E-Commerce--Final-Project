@@ -231,3 +231,53 @@
             color: #999;
             margin-top: 4px;
         }
+
+/* ==========================================================================
+   6. PRODUCT PAGE (Image Display, Info Card)
+   ========================================================================== */
+
+        .product-title { /* Equivalent to h1 */
+            width: 1200px;
+            padding-left: 10px;
+        }
+
+        /* !! Nothing is quite aligning the way it should. I'll fix it soon. - Sera !! */
+
+       div.product-page {
+        width: 100%;
+        overflow: auto; /* What does this do? */
+       }
+
+       div.product-page div { /* Refers to the sub div of product page (the info card) */
+        width: 47%;
+        float: left;
+        margin: 1rem;
+       }
+
+        .info-card { /* The card in which both the image and product info (price) are contained */
+            height: max-content;
+            background-color: #ffffff;
+            border: 1px solid #ff99cc;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 0 20px rgba(128, 128, 128, 0.331);
+        }
+
+        .info-card:hover {
+            box-shadow: 0 0 20px #ff99cc; /* Pink glow on hover */
+            transform: translateY(-5px);
+        }
+
+        .image { /* Making the image fit better aesthetically */
+            border: 1px solid #ff99cc;
+            border-radius: 10px;
+            vertical-align: middle;
+        }
+
+        .list-button { /* The button that adds the item to the user's list */
+            border: 1px solid #ff99cc;
+            border-radius: 10px;
+            background-color: #fddbe8;
+            padding: 10px;
+        }
