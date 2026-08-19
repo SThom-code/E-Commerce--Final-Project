@@ -236,36 +236,38 @@
    6. PRODUCT PAGE (Image Display, Info Card)
    ========================================================================== */
 
-        .product-title { /* Equivalent to h1 */
+        .product-title { 
+            text-align: center;
             width: 1200px;
-            padding-left: 10px;
+            padding: 10px;
+            margin-left: 15px;
+            background-color: #ffffff;
+            border: 1px solid #ff99cc;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ff99cc;
         }
 
-        /* !! Nothing is quite aligning the way it should. I'll fix it soon. - Sera !! */
-
-       div.product-page {
+       div.product-page { /* Main body for info cards */
         width: 100%;
-        overflow: auto; /* What does this do? */
-       }
-
-       div.product-page div { /* Refers to the sub div of product page (the info card) */
-        width: 47%;
-        float: left;
-        margin: 1rem;
+        overflow: auto; /* Automatically adds a scroll bar to see content not fitting in the container */
+        display: flex; 
        }
 
         .info-card { /* The card in which both the image and product info (price) are contained */
+            align-self: center;
+            width: 50%;
             height: max-content;
             background-color: #ffffff;
             border: 1px solid #ff99cc;
             border-radius: 10px;
             padding: 1rem;
+            margin: 1rem;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
             box-shadow: 0 0 20px rgba(128, 128, 128, 0.331);
         }
 
         .info-card:hover {
-            box-shadow: 0 0 20px #ff99cc; /* Pink glow on hover */
+            box-shadow: 0 0 20px #ff99cc; 
             transform: translateY(-5px);
         }
 
@@ -280,4 +282,8 @@
             border-radius: 10px;
             background-color: #fddbe8;
             padding: 10px;
+        }
+
+        .list-button:active {
+            background-color: #ff99cc;
         }
