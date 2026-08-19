@@ -160,5 +160,3 @@
             document.getElementById('summary-total').textContent = '$' + (subtotal + 15).toFixed(2);
         }
     </script>
-</body>
-</html>
