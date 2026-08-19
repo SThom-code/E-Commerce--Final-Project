@@ -73,6 +73,7 @@
             border-right: 1px solid #555;
         }
         .nav-list li:last-child {
+            flex: 1;
             border-right: none;
         }
         .nav-link {
