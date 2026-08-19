@@ -1,167 +1,370 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alice Clothing</title>
-    <link rel="stylesheet" href="EcomStyle.css">
-    <link rel="icon" type="aliceLogo" href="aliceLogo(1).png">
-</head>
 <body>
 
-    <!-- ////////////////////////////////////////
-                    HEADER & LOGO
-        //////////////////////////////////////// -->
+    <!-- Header & Logo -->
     <header class="main-header">
         <img src="aliceLogo(1).png" alt="Alice Logo" class="logo-img" width="1000" height="800">
     </header>
 
-    <!-- ////////////////////////////////////////
-                    INTERACTIVE NAV
-        //////////////////////////////////////// -->
+    <!-- Nav -->
     <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-list">
             <li><a href="#" class="nav-link active" onclick="openTab(event, 'home-tab')">Home</a></li>
             <li><a href="#" class="nav-link" onclick="openTab(event, 'new-arrivals-tab')">New Arrivals</a></li>
-            <li><a href="#" class="nav-link" onclick="openTab(event, 'collections-tab')">Collections</a></li>
-            <li><a href="#" class="nav-link" onclick="openTab(event, 'shop-tab')">Shop</a></li>
+            <li><a href="#" class="nav-link" onclick="openTab(event, 'collections-tab')">Dresses</a></li>
+            <li><a href="#" class="nav-link" onclick="openTab(event, 'shop-tab')">Tops</a></li>
             <li><a href="#" class="nav-link" onclick="openTab(event, 'best-sellers-tab')">Best Sellers</a></li>
-            <li><a href="#" class="nav-link" onclick="openTab(event, 'type1-tab')">Women</a></li>
-            <li><a href="#" class="nav-link" onclick="openTab(event, 'type2-tab')">Men</a></li>
-            <li><a href="#" class="nav-link" onclick="openTab(event, 'checkout-tab')">Checkout</a></li>
+            <li><a href="#" class="nav-link" onclick="openTab(event, 'bottoms-tab')">Bottoms</a></li>
+            <li><a href="#" id="nav-checkout-btn" class="nav-link" onclick="openTab(event, 'checkout-tab')">Checkout</a></li>
         </ul>
     </nav>
 
     <main class="container">
         
-        <!-- ////////////////////////////////////////
-                            HOME TAB 
-            //////////////////////////////////////// -->
+        <!-- HOME TAB -->
         <section id="home-tab" class="tab-content active">
             <div class="hero-section">
-                <!-- White Frame Layer -->
-                <img src="cadres et bordures  - Page 14.jpeg" alt="White Frame Border" class="frame-overlay">
-                
-                <!-- Slideshow Layer -->
-                <div class="slideshow-container">
-                    <img src="🎶🥖🦢🧁.jpeg" class="slide active" alt="Slide 1">
-                    <img src="_ (6).jpeg" class="slide" alt="Slide 2">
-                    <img src="Flowing Color Palette  Detachable Wrap Short Jacket - M _ Pink.jpeg" class="slide" alt="Slide 3">
+                <div class="hero-image-wrapper">
+                    <div class="slideshow-container">
+                        <img src="🎶🥖🦢🧁.jpeg" class="slide active" alt="Slide 1">
+                        <img src="_ (6).jpeg" class="slide" alt="Slide 2">
+                        <img src="Flowing Color Palette  Detachable Wrap Short Jacket - M _ Pink.jpeg" class="slide" alt="Slide 3">
+                    </div>
+                    <div class="dots-container">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
                 </div>
-
-                <!-- Navigation Dots -->
-                <div class="dots-container">
-                    <span class="dot active" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
+                
+                <div class="hero-text-wrapper">
+                    <img src="cadres et bordures  - Page 14.jpeg" alt="White Frame Border" class="text-frame-overlay">
+                    <div class="text-inner-content">
+                        <h2>What's New ?</h2>
+                        <p>Discover our latest seasonal arrivals. We've updated our collection by adding new trendy shoes to our selection. Check out the 'New Arrivals' tab to view them. As always, stay chic!!</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ////////////////////////////////////////
-                        NEW ARRIVALS TAB 
-            //////////////////////////////////////// -->
+        <!-- NEW ARRIVALS TAB -->
         <section id="new-arrivals-tab" class="tab-content">
             <h2 class="category-title">New Arrivals</h2>
             <div class="product-grid">
-                <div class="product-card">
-                    <div class="smooth-rectangle"></div>
-                    <div class="price-tag">Item Name<span>$00.00 + (TAX)</span></div>
+                <div class="product-card" onclick="viewProduct('bow_sandals')">
+                    <div class="smooth-rectangle">
+                        <img src="⊹ ࣪ ˖ ᥬᩤ       𝙎𝙔𝙇𝙑𝙄𝙀       𝙇𝙀𝙀          _   ♡ྀི ⋆˚࿔.jpeg" alt="Pink Bow Sandals">
+                    </div>
+                    <div class="price-tag">Pink Bow Sandals<span>$45.00</span></div>
                 </div>
-                <div class="product-card">
-                    <div class="smooth-rectangle"></div>
-                    <div class="price-tag">Item Name<span>$00.00 + (TAX)</span></div>
+                <div class="product-card" onclick="viewProduct('mary_janes')">
+                    <div class="smooth-rectangle">
+                        <img src="808185095670072124.jpeg" alt="Vintage Mary Janes">
+                    </div>
+                    <div class="price-tag">Vintage Mary Janes<span>$65.00</span></div>
                 </div>
-                <div class="product-card">
-                    <div class="smooth-rectangle"></div>
-                    <div class="price-tag">Item Name<span>$00.00 + (TAX)</span></div>
+                <div class="product-card" onclick="viewProduct('fur_boots')">
+                    <div class="smooth-rectangle">
+                        <img src="936748791279688915.jpeg" alt="Leopard Fur Boots">
+                    </div>
+                    <div class="price-tag">Leopard Fur Boots<span>$120.00</span></div>
                 </div>
-                <div class="product-card">
-                    <div class="smooth-rectangle"></div>
-                    <div class="price-tag">Item Name<span>$00.00 + (TAX)</span></div>
+                <div class="product-card" onclick="viewProduct('ribbon_boots')">
+                    <div class="smooth-rectangle">
+                        <img src="1135047912347905382.jpeg" alt="Ribbon Lace-Up Boots">
+                    </div>
+                    <div class="price-tag">Ribbon Lace-Up Boots<span>$95.00</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- ////////////////////////////////////////
-                      COLLECTIONS TAB 
-            //////////////////////////////////////// -->
+        <!-- COLLECTIONS TAB -->
         <section id="collections-tab" class="tab-content">
-            <h2 class="category-title">Collections</h2>
+            <h2 class="category-title">Dresses</h2>
             <div class="product-grid">
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Collection Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Collection Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Collection Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Collection Item<span>$00.00</span></div></div>
+                <div class="product-card" onclick="viewProduct('winter')">
+                    <div class="smooth-rectangle">
+                        <img src="_ (7).jpeg" alt="Winter Bliss">
+                    </div>
+                    <div class="price-tag">Winter Bliss<span>$185.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('cocktail')">
+                    <div class="smooth-rectangle">
+                        <img src="_ (8).jpeg" alt="Cocktail Hour">
+                    </div>
+                    <div class="price-tag">Cocktail Hour<span>$140.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('scarlette')">
+                    <div class="smooth-rectangle">
+                        <img src="897623769502960659.jpeg" alt="Scarlette's Revenge">
+                    </div>
+                    <div class="price-tag">Scarlette's Revenge<span>$210.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('wedding')">
+                    <div class="smooth-rectangle">
+                        <img src="897623769502960658.jpeg" alt="Wedding Disaster">
+                    </div>
+                    <div class="price-tag">Wedding Disaster<span>$250.00</span></div>
+                </div>
             </div>
         </section>
 
-        <!-- ////////////////////////////////////////
-                          SHOP TAB 
-            //////////////////////////////////////// -->
+        <!--PRODUCT VIEW TAB -->
+        <section id="product-view-tab" class="tab-content">
+            <div class="product-view-layout">
+                <div class="pv-left">
+                    <img id="pv-img" src="" alt="Product Image">
+                </div>
+                
+                <div class="pv-right">
+                    <h1 id="pv-title" class="pv-title">Title Here</h1>
+                    <div id="pv-price" class="pv-price">$0.00</div>
+                    
+                    <div class="pv-section-label">Select Size</div>
+                    <div class="size-circles">
+                        <div class="size-circle" onclick="selectSize(this, 'XS')">XS</div>
+                        <div class="size-circle" onclick="selectSize(this, 'S')">S</div>
+                        <div class="size-circle" onclick="selectSize(this, 'M')">M</div>
+                        <div class="size-circle" onclick="selectSize(this, 'L')">L</div>
+                        <div class="size-circle" onclick="selectSize(this, 'XL')">XL</div>
+                    </div>
+
+                    <div class="pv-section-label">Quantity</div>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <span id="pv-qty">1</span>
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+
+                    <button class="add-cart-btn" onclick="addToCart()">Add to Bag</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOPS TAB  -->
         <section id="shop-tab" class="tab-content">
-            <h2 class="category-title">Shop All</h2>
+            <h2 class="category-title">Tops</h2>
             <div class="product-grid">
-                <!-- The link below leads to the test product page -->
-                <a href="productPageTest.html" class="link"><div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Shop Item<span>$00.00</span></div></div></a>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Shop Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Shop Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Shop Item<span>$00.00</span></div></div>
+                <div class="product-card" onclick="viewProduct('white_coat')">
+                    <div class="smooth-rectangle"><img src="701013498290441297.jpeg" alt="White Peacoat"></div>
+                    <div class="price-tag">White Peacoat<span>$150.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('brown_polka_top')">
+                    <div class="smooth-rectangle"><img src="polka dot top.jpeg" alt="Brown Polka Dot Top"></div>
+                    <div class="price-tag">Brown Polka Dot Top<span>$35.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('white_polka_top')">
+                    <div class="smooth-rectangle"><img src="polka dot outfit inspo.jpeg" alt="White Polka Dot Top"></div>
+                    <div class="price-tag">White Polka Dot Top<span>$40.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('pink_dream_top')">
+                    <div class="smooth-rectangle"><img src="💭.jpeg" alt="Pink Dream Top"></div>
+                    <div class="price-tag">Pink Dream Top<span>$45.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('white_lace_top')">
+                    <div class="smooth-rectangle"><img src="ꫂ᭪݁.jpeg" alt="Pink Fur Zip-Up Jacket"></div>
+                    <div class="price-tag">Pink Fur Zip-Up Jacket<span>$38.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('dark_blue_top')">
+                    <div class="smooth-rectangle"><img src="833377106091017171.jpeg" alt="Black Babydoll Top With Bow"></div>
+                    <div class="price-tag">Black Babydoll Top With Bow<span>$42.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('pink_fuzzy_top')">
+                    <div class="smooth-rectangle"><img src="lizzie young.jpeg" alt="White Babydoll Top With Bow"></div>
+                    <div class="price-tag">White Babydoll Top With Bow<span>$50.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('caterina_babydoll_top')">
+                    <div class="smooth-rectangle"><img src="Caterina Babydoll Lace Top for Women Pink Long Sleeve with Polka Dot Bow.jpeg" alt="Caterina Babydoll Lace Top"></div>
+                    <div class="price-tag">Caterina Babydoll Top<span>$48.00</span></div>
+                </div>
             </div>
         </section>
 
-        <!-- ////////////////////////////////////////
-                      BEST SELLERS TAB 
-            //////////////////////////////////////// -->
+        <!-- BEST SELLERS TAB -->
         <section id="best-sellers-tab" class="tab-content">
             <h2 class="category-title">Best Sellers</h2>
             <div class="product-grid">
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Best Seller<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Best Seller<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Best Seller<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Best Seller<span>$00.00</span></div></div>
+                <div class="product-card" onclick="viewProduct('brown_polka_top')">
+                    <div class="smooth-rectangle"><img src="polka dot top.jpeg" alt="Brown Polka Dot Top"></div>
+                    <div class="price-tag">Brown Polka Dot Top<span>$35.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('pink_dream_top')">
+                    <div class="smooth-rectangle"><img src="💭.jpeg" alt="Pink Dream Top"></div>
+                    <div class="price-tag">Pink Dream Top<span>$45.00</span></div>
+                </div>
+                
+                <div class="product-card" onclick="viewProduct('coquette_skirt')">
+                    <div class="smooth-rectangle">
+                        <img src="cute  skirt  coquette  !!♡.jpeg" alt="Coquette Lace Skirt">
+                    </div>
+                    <div class="price-tag">Coquette Lace Skirt <span>$40.00</span></div>
+                </div>
+                
+                <div class="product-card" onclick="viewProduct('ribbon_boots')">
+                    <div class="smooth-rectangle">
+                        <img src="1135047912347905382.jpeg" alt="Ribbon Lace-Up Boots">
+                    </div>
+                    <div class="price-tag">Ribbon Lace-Up Boots <span>$90.00</span></div>
+                </div>
             </div>
         </section>
 
-        <!-- ////////////////////////////////////////
-                          WOMEN TAB 
-            //////////////////////////////////////// -->
-        <section id="Women-tab" class="tab-content">
-            <h2 class="category-title">Women</h2>
+        <!-- BOTTOMS TAB -->
+        <section id="bottoms-tab" class="tab-content">
+            <h2 class="category-title">Bottoms</h2>
             <div class="product-grid">
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
+                <div class="product-card" onclick="viewProduct('ruffle_shorts')">
+                    <div class="smooth-rectangle">
+                        <img src="lizzie young (1).jpeg" alt="Pink Ruffle Shorts">
+                    </div>
+                    <div class="price-tag">Pink Ruffle Shorts<span>$35.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('polka_shorts')">
+                    <div class="smooth-rectangle">
+                        <img src="ᴘᴏʟᴋᴀ ᴅᴏᴛ sʜᴏʀᴛs  ☁ (1).jpeg" alt="Polka Dot Shorts">
+                    </div>
+                    <div class="price-tag">Polka Dot Shorts<span>$30.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('coquette_skirt')">
+                    <div class="smooth-rectangle">
+                        <img src="cute  skirt  coquette  !!♡.jpeg" alt="Coquette Lace Skirt">
+                    </div>
+                    <div class="price-tag">Coquette Lace Skirt<span>$40.00</span></div>
+                </div>
+                <div class="product-card" onclick="viewProduct('flared_trousers')">
+                    <div class="smooth-rectangle">
+                        <img src="2025 Autumn Winter Women Y2k Long Trousers Fake Two Pieces 2000s Kpop Fashion Gyaru Low Rise Flared.jpeg" alt="Y2K Flared Trousers">
+                    </div>
+                    <div class="price-tag">Y2K Flared Trousers<span>$55.00</span></div>
+                </div>
             </div>
         </section>
 
-        <!-- ////////////////////////////////////////
-                            MEN TAB 
-            //////////////////////////////////////// -->
-        <section id="Men-tab" class="tab-content">
-            <h2 class="category-title">Men</h2>
-            <div class="product-grid">
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
-                <div class="product-card"><div class="smooth-rectangle"></div><div class="price-tag">Type Item<span>$00.00</span></div></div>
-            </div>
-        </section>
-
-        <!-- ////////////////////////////////////////
-                         CHECKOUT TAB 
-            //////////////////////////////////////// -->
+        <!-- CHECKOUT TAB -->
         <section id="checkout-tab" class="tab-content">
-            <h2 class="category-title">Checkout</h2>
-            <p style="text-align: center; color: #555;">Your cart details will appear here.</p>
+            <h2 class="category-title">Shopping Bag</h2>
+            
+            <div class="checkout-layout">
+                <div class="cart-items-container" id="cart-container">
+                    <div class="empty-cart-msg">Your shopping bag is empty.</div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Shipping</span>
+                        <span>$15.00</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span id="summary-total">$0.00</span>
+                    </div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <script src="Elena.js"></script>
-    
-</body>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>ALICE ONLINE STORE</h4>
+                <button class="footer-shop-btn">SHOP ONLINE NOW</button>
+            </div>
+            <div class="footer-col" style="text-align: center;">
+                <button class="footer-pill-btn">NEW COLLECTION</button>
+            </div>
+            <div class="footer-col">
+                <h4>BLOG POSTS</h4>
+                <ul>
+                    <li><a href="#">Follow us on FACEBOOK</a></li>
+                    <li><a href="#">To get notified of our newest collections —</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Want to be part of Alice's Exclusive Club?</h4>
+                <p>Sign up & become a MEMBER!</p>
+                <input type="text" class="footer-input" placeholder="Type">
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; Alice Clothing. All rights reserved.
+        </div>
+    </footer>
 
-</body>
-</html>
+    <script>
+        // Tab Navigation
+        function openTab(event, tabId) {
+            if(event) event.preventDefault(); 
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            
+            if(event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+        }
+
+        // Slideshow
+        let slideIndex = 0;
+        let slideInterval;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            slideIndex = index;
+        }
+
+        function nextSlide() {
+            let nextIndex = (slideIndex + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 6000);
+        }
+
+        function currentSlide(index) {
+            clearInterval(slideInterval); 
+            showSlide(index);
+            startSlideshow(); 
+        }
+
+        startSlideshow();
+
+        // PRODUCT DATABASE
+        const productsDatabase = {
+            'bow_sandals': { id: 'bow_sandals', name: 'Pink Bow Sandals', price: 45.00, image: '⊹ ࣪ ˖ ᥬᩤ       𝙎𝙔𝙇𝙑𝙄𝙀       𝙇𝙀𝙀          _   ♡ྀི ⋆˚࿔.jpeg' },
+            'mary_janes': { id: 'mary_janes', name: 'Vintage Mary Janes', price: 65.00, image: '808185095670072124.jpeg' },
+            'fur_boots': { id: 'fur_boots', name: 'Leopard Fur Boots', price: 120.00, image: '936748791279688915.jpeg' },
+            'ribbon_boots': { id: 'ribbon_boots', name: 'Ribbon Lace-Up Boots', price: 90.00, image: '1135047912347905382.jpeg' },
+            'winter': { id: 'winter', name: 'Winter Bliss', price: 185.00, image: '_ (7).jpeg' },
+            'cocktail': { id: 'cocktail', name: 'Cocktail Hour', price: 140.00, image: '_ (8).jpeg' },
+            'scarlette': { id: 'scarlette', name: 'Scarlette\'s Revenge', price: 210.00, image: '897623769502960659.jpeg' },
+            'wedding': { id: 'wedding', name: 'Wedding Disaster', price: 250.00, image: '897623769502960658.jpeg' },
+            'ruffle_shorts': { id: 'ruffle_shorts', name: 'Pink Ruffle Shorts', price: 35.00, image: 'lizzie young (1).jpeg' },
+            'polka_shorts': { id: 'polka_shorts', name: 'Polka Dot Shorts', price: 30.00, image: 'ᴘᴏʟᴋᴀ ᴅᴏᴛ sʜᴏʀᴛs  ☁ (1).jpeg' },
+            'coquette_skirt': { id: 'coquette_skirt', name: 'Coquette Lace Skirt', price: 40.00, image: 'cute  skirt  coquette  !!♡.jpeg' },
+            'flared_trousers': { id: 'flared_trousers', name: 'Y2K Flared Trousers', price: 55.00, image: '2025 Autumn Winter Women Y2k Long Trousers Fake Two Pieces 2000s Kpop Fashion Gyaru Low Rise Flared.jpeg' },
+            'white_coat': { id: 'white_coat', name: 'White Peacoat', price: 150.00, image: '701013498290441297.jpeg' },
+            'brown_polka_top': { id: 'brown_polka_top', name: 'Brown Polka Dot Top', price: 35.00, image: 'polka dot top.jpeg' },
+            'white_polka_top': { id: 'white_polka_top', name: 'White Polka Dot Top', price: 40.00, image: 'polka dot outfit inspo.jpeg' },
+            'pink_dream_top': { id: 'pink_dream_top', name: 'Pink Dream Top', price: 45.00, image: '💭.jpeg' },
+            'white_lace_top': { id: 'white_lace_top', name: 'Pink Fur Zip-Up Jacket', price: 38.00, image: 'ꫂ᭪݁.jpeg' },
+            'dark_blue_top': { id: 'dark_blue_top', name: 'Black Babydoll Top With Bow', price: 42.00, image: '833377106091017171.jpeg' },
+            'pink_fuzzy_top': { id: 'pink_fuzzy_top', name: 'White Babydoll Top With Bow', price: 50.00, image: 'lizzie young.jpeg' },
+            'caterina_babydoll_top': { id: 'caterina_babydoll_top', name: 'Caterina Babydoll Top', price: 48.00, image: 'Caterina Babydoll Lace Top for Women Pink Long Sleeve with Polka Dot Bow.jpeg' }
+        };
