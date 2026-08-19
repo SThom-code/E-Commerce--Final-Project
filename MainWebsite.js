@@ -1,6 +1,6 @@
- <script>
+
         // Tab Navigation
-        function openTab(event, tabId) {
+        function openTab(event, tabId); {
             if(event) event.preventDefault(); 
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
@@ -159,4 +159,3 @@
             document.getElementById('summary-subtotal').textContent = '$' + subtotal.toFixed(2);
             document.getElementById('summary-total').textContent = '$' + (subtotal + 15).toFixed(2);
         }
-    </script>
