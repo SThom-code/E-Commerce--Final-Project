@@ -233,8 +233,13 @@
         }
 
 /* ==========================================================================
-   6. PRODUCT PAGE (Image Display, Info Card)
+   6. PRODUCT PAGE (Image Display, Info Card, Linking to Product Page)
    ========================================================================== */
+
+        /* How to get there */
+        .link {
+            text-decoration: none;
+        }
 
         .product-title { 
             text-align: center;
@@ -275,6 +280,10 @@
             border: 1px solid #ff99cc;
             border-radius: 10px;
             vertical-align: middle;
+        }
+
+        .size-button {
+            accent-color: #ff99cc;
         }
 
         .list-button { /* The button that adds the item to the user's list */
