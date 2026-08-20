@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-    <!--All the required code for the website is here. Downloading the images is the only other thing required. -->
-    
+<html lang="en">
 <head>
     <link rel="icon" type="aliceLogo" href="aliceLogo(1).png">
     
@@ -48,14 +45,46 @@
             border: 0;
         }
 
-        /* Header / Logo */
+        /* Header and Logo */
         .main-header {
+            position: relative;
             text-align: center;
-            padding: 5px 0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
         .logo-img {
             height: 170px;
             object-fit: contain;
+        }
+
+        /*  Log In Button */
+        .header-login-btn {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ff99cc;
+            color: #ffffff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 20px;
+            font-family: 'Snell Roundhand', 'Brush Script MT', cursive;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header-login-btn:hover {
+            background-color: #d0587d;
+            box-shadow: 0 0 15px #ff99cc;
+            transform: translateY(-50%) scale(1.05);
         }
 
         /* Navigation Bar */
@@ -668,6 +697,7 @@
     <!-- Header & Logo -->
     <header class="main-header">
         <img src="aliceLogo(1).png" alt="Alice Logo" class="logo-img" width="1000" height="800">
+        <button class="header-login-btn">Log In</button>
     </header>
 
     <!-- Nav -->
@@ -704,8 +734,8 @@
                 <div class="hero-text-wrapper">
                     <img src="cadres et bordures  - Page 14.jpeg" alt="White Frame Border" class="text-frame-overlay">
                     <div class="text-inner-content">
-                        <h2>What's New ?</h2>
-                        <p>Discover our latest seasonal arrivals. We've updated our collection by adding new trendy shoes to our selection. Check out the 'New Arrivals' tab to view them. As always, stay chic!!</p>
+                        <h2>What's New</h2>
+                        <p>Discover our latest seasonal arrivals. We've updated our collection by adding new trendy shoes to our selection. Stay chic and explore the trends everyone is talking about!</p>
                     </div>
                 </div>
             </div>
@@ -717,7 +747,7 @@
             <div class="product-grid">
                 <div class="product-card" onclick="viewProduct('bow_sandals')">
                     <div class="smooth-rectangle">
-                        <img src="⊹ ࣪ ˖ ᥬᩤ       𝙎𝙔𝙇𝙑𝙄𝙀       𝙇𝙀𝙀          _   ♡ྀི ⋆˚࿔.jpeg" alt="Pink Bow Sandals">
+                        <img src="⊹ ࣪ ˖ ᥬᩤ       𝙎𝙔𝙇𝙑𝙄𝙀       𝙇𝙀𝙀         _   ♡ྀི ⋆˚࿔.jpeg" alt="Pink Bow Sandals">
                     </div>
                     <div class="price-tag">Pink Bow Sandals<span>$45.00</span></div>
                 </div>
@@ -818,27 +848,27 @@
                     <div class="price-tag">Brown Polka Dot Top<span>$35.00</span></div>
                 </div>
                 <div class="product-card" onclick="viewProduct('white_polka_top')">
-                    <div class="smooth-rectangle"><img src="polka dot outfit inspo.jpeg" alt="White Polka Dot Top"></div>
+                    <div class="smooth-rectangle"><img src="polka dot outfit inspo_2.jpeg" alt="White Polka Dot Top"></div>
                     <div class="price-tag">White Polka Dot Top<span>$40.00</span></div>
                 </div>
                 <div class="product-card" onclick="viewProduct('pink_dream_top')">
-                    <div class="smooth-rectangle"><img src="💭.jpeg" alt="Pink Dream Top"></div>
+                    <div class="smooth-rectangle"><img src="💭_2.jpeg" alt="Pink Dream Top"></div>
                     <div class="price-tag">Pink Dream Top<span>$45.00</span></div>
                 </div>
                 <div class="product-card" onclick="viewProduct('white_lace_top')">
-                    <div class="smooth-rectangle"><img src="ꫂ᭪݁.jpeg" alt="Pink Fur Zip-Up Jacket"></div>
-                    <div class="price-tag">Pink Fur Zip-Up Jacket<span>$38.00</span></div>
+                    <div class="smooth-rectangle"><img src="ꫂ᭪݁.jpeg" alt="White Lace Top"></div>
+                    <div class="price-tag">White Lace Top<span>$38.00</span></div>
                 </div>
                 <div class="product-card" onclick="viewProduct('dark_blue_top')">
-                    <div class="smooth-rectangle"><img src="833377106091017171.jpeg" alt="Black Babydoll Top With Bow"></div>
-                    <div class="price-tag">Black Babydoll Top With Bow<span>$42.00</span></div>
+                    <div class="smooth-rectangle"><img src="833377106091017171_2.jpeg" alt="Dark Blue Ribbon Top"></div>
+                    <div class="price-tag">Dark Blue Ribbon Top<span>$42.00</span></div>
                 </div>
                 <div class="product-card" onclick="viewProduct('pink_fuzzy_top')">
-                    <div class="smooth-rectangle"><img src="lizzie young.jpeg" alt="White Babydoll Top With Bow"></div>
-                    <div class="price-tag">White Babydoll Top With Bow<span>$50.00</span></div>
+                    <div class="smooth-rectangle"><img src="lizzie young.jpeg" alt="Pink Fuzzy Cardigan"></div>
+                    <div class="price-tag">Pink Fuzzy Cardigan<span>$50.00</span></div>
                 </div>
                 <div class="product-card" onclick="viewProduct('caterina_babydoll_top')">
-                    <div class="smooth-rectangle"><img src="Caterina Babydoll Lace Top for Women Pink Long Sleeve with Polka Dot Bow.jpeg" alt="Caterina Babydoll Lace Top"></div>
+                    <div class="smooth-rectangle"><img src="Caterina Babydoll Lace Top for Women Pink Long Sleeve with Polka Dot Bow_2.jpeg" alt="Caterina Babydoll Lace Top"></div>
                     <div class="price-tag">Caterina Babydoll Top<span>$48.00</span></div>
                 </div>
             </div>
@@ -853,7 +883,7 @@
                     <div class="price-tag">Brown Polka Dot Top<span>$35.00</span></div>
                 </div>
                 <div class="product-card" onclick="viewProduct('pink_dream_top')">
-                    <div class="smooth-rectangle"><img src="💭.jpeg" alt="Pink Dream Top"></div>
+                    <div class="smooth-rectangle"><img src="💭_2.jpeg" alt="Pink Dream Top"></div>
                     <div class="price-tag">Pink Dream Top<span>$45.00</span></div>
                 </div>
                 
@@ -919,10 +949,6 @@
                         <span id="summary-subtotal">$0.00</span>
                     </div>
                     <div class="summary-row">
-                        <span>Tax</span>
-                        <span id="summary-tax">$0.00</span>
-                    </div>
-                    <div class="summary-row">
                         <span>Estimated Shipping</span>
                         <span>$15.00</span>
                     </div>
@@ -945,7 +971,7 @@
                 <button class="footer-shop-btn">SHOP ONLINE NOW</button>
             </div>
             <div class="footer-col" style="text-align: center;">
-                <button class="footer-pill-btn">NEW COLLECTION</button>
+                <button class="footer-pill-btn">type</button>
             </div>
             <div class="footer-col">
                 <h4>BLOG POSTS</h4>
@@ -982,7 +1008,7 @@
             }
         }
 
-        // Slideshow
+        // Slideshow Logic
         let slideIndex = 0;
         let slideInterval;
         const slides = document.querySelectorAll('.slide');
@@ -1014,9 +1040,9 @@
 
         startSlideshow();
 
-        // PRODUCT DATABASE
+        // FULLY POPULATED PRODUCT DATABASE
         const productsDatabase = {
-            'bow_sandals': { id: 'bow_sandals', name: 'Pink Bow Sandals', price: 45.00, image: '⊹ ࣪ ˖ ᥬᩤ       𝙎𝙔𝙇𝙑𝙄𝙀       𝙇𝙀𝙀          _   ♡ྀི ⋆˚࿔.jpeg' },
+            'bow_sandals': { id: 'bow_sandals', name: 'Pink Bow Sandals', price: 45.00, image: '⊹ ࣪ ˖ ᥬᩤ       𝙎𝙔𝙇𝙑𝙄𝙀       𝙇𝙀𝙀         _   ♡ྀི ⋆˚࿔.jpeg' },
             'mary_janes': { id: 'mary_janes', name: 'Vintage Mary Janes', price: 65.00, image: '808185095670072124.jpeg' },
             'fur_boots': { id: 'fur_boots', name: 'Leopard Fur Boots', price: 120.00, image: '936748791279688915.jpeg' },
             'ribbon_boots': { id: 'ribbon_boots', name: 'Ribbon Lace-Up Boots', price: 90.00, image: '1135047912347905382.jpeg' },
@@ -1030,15 +1056,15 @@
             'flared_trousers': { id: 'flared_trousers', name: 'Y2K Flared Trousers', price: 55.00, image: '2025 Autumn Winter Women Y2k Long Trousers Fake Two Pieces 2000s Kpop Fashion Gyaru Low Rise Flared.jpeg' },
             'white_coat': { id: 'white_coat', name: 'White Peacoat', price: 150.00, image: '701013498290441297.jpeg' },
             'brown_polka_top': { id: 'brown_polka_top', name: 'Brown Polka Dot Top', price: 35.00, image: 'polka dot top.jpeg' },
-            'white_polka_top': { id: 'white_polka_top', name: 'White Polka Dot Top', price: 40.00, image: 'polka dot outfit inspo.jpeg' },
-            'pink_dream_top': { id: 'pink_dream_top', name: 'Pink Dream Top', price: 45.00, image: '💭.jpeg' },
-            'white_lace_top': { id: 'white_lace_top', name: 'Pink Fur Zip-Up Jacket', price: 38.00, image: 'ꫂ᭪݁.jpeg' },
-            'dark_blue_top': { id: 'dark_blue_top', name: 'Black Babydoll Top With Bow', price: 42.00, image: '833377106091017171.jpeg' },
-            'pink_fuzzy_top': { id: 'pink_fuzzy_top', name: 'White Babydoll Top With Bow', price: 50.00, image: 'lizzie young.jpeg' },
-            'caterina_babydoll_top': { id: 'caterina_babydoll_top', name: 'Caterina Babydoll Top', price: 48.00, image: 'Caterina Babydoll Lace Top for Women Pink Long Sleeve with Polka Dot Bow.jpeg' }
+            'white_polka_top': { id: 'white_polka_top', name: 'White Polka Dot Top', price: 40.00, image: 'polka dot outfit inspo_2.jpeg' },
+            'pink_dream_top': { id: 'pink_dream_top', name: 'Pink Dream Top', price: 45.00, image: '💭_2.jpeg' },
+            'white_lace_top': { id: 'white_lace_top', name: 'White Lace Top', price: 38.00, image: 'ꫂ᭪݁.jpeg' },
+            'dark_blue_top': { id: 'dark_blue_top', name: 'Dark Blue Ribbon Top', price: 42.00, image: '833377106091017171_2.jpeg' },
+            'pink_fuzzy_top': { id: 'pink_fuzzy_top', name: 'Pink Fuzzy Cardigan', price: 50.00, image: 'lizzie young.jpeg' },
+            'caterina_babydoll_top': { id: 'caterina_babydoll_top', name: 'Caterina Babydoll Top', price: 48.00, image: 'Caterina Babydoll Lace Top for Women Pink Long Sleeve with Polka Dot Bow_2.jpeg' }
         };
 
-        // Interactive Func 
+        // Interactive Functionality 
         let currentProduct = null;
         let selectedSize = 'M';
         let currentQty = 1;
@@ -1047,7 +1073,7 @@
         function viewProduct(productId) {
             currentProduct = productsDatabase[productId];
             
-            // Product View Tab
+            // Update UI elements in Product View Tab
             document.getElementById('pv-img').src = currentProduct.image;
             document.getElementById('pv-title').textContent = currentProduct.name;
             document.getElementById('pv-price').textContent = '$' + currentProduct.price.toFixed(2);
@@ -1121,12 +1147,9 @@
                 `;
             });
             
-            let tax = (subtotal * 0.15);
-            
             container.innerHTML = htmlContent;
             document.getElementById('summary-subtotal').textContent = '$' + subtotal.toFixed(2);
-            document.getElementById('summary-tax').textContent = '$' + tax.toFixed(2);
-            document.getElementById('summary-total').textContent = '$' + (subtotal + 15 + tax).toFixed(2);
+            document.getElementById('summary-total').textContent = '$' + (subtotal + 15).toFixed(2);
         }
     </script>
 </body>
