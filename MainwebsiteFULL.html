@@ -915,6 +915,10 @@
                         <span id="summary-subtotal">$0.00</span>
                     </div>
                     <div class="summary-row">
+                        <span>Tax</span>
+                        <span id="summary-tax">$0.00</span>
+                    </div>
+                    <div class="summary-row">
                         <span>Estimated Shipping</span>
                         <span>$15.00</span>
                     </div>
@@ -1113,9 +1117,12 @@
                 `;
             });
             
+            let tax = (subtotal * 0.15);
+            
             container.innerHTML = htmlContent;
             document.getElementById('summary-subtotal').textContent = '$' + subtotal.toFixed(2);
-            document.getElementById('summary-total').textContent = '$' + (subtotal + 15).toFixed(2);
+            document.getElementById('summary-tax').textContent = '$' + tax.toFixed(2);
+            document.getElementById('summary-total').textContent = '$' + (subtotal + 15 + tax).toFixed(2);
         }
     </script>
 </body>
