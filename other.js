@@ -67,13 +67,6 @@ const inventory = [
 
 let currentUser = null;
 
-function handleLoginSubmit() {
-    const enteredUser = document.getElementById("loginUser").value;
-    const enteredPass = document.getElementById("loginPass").value;
-
-    login(enteredUser, enteredPass);
-}
-
 const selectedSizes = {};
 
 function selectSize(productId, size, button) {
@@ -87,6 +80,14 @@ function selectSize(productId, size, button) {
 
     button.classList.add('active');
 }
+
+function handleLoginSubmit() {
+    const enteredUser = document.getElementById("loginUser").value;
+    const enteredPass = document.getElementById("loginPass").value;
+
+    login(enteredUser, enteredPass);
+}
+
 
 function handleRegistrationSubmit() {
     const newName = document.getElementById("regName").value;
