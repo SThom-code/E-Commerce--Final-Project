@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice Closet</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦋</text></svg>">
+    <link rel="stylesheet" href="other.css">
+    <script src="other.js"></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <img src="Images/aliceLogo(1).png" alt="Alice Logo" class="logo-img" width="20%" height="20%">
+    </header>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+        
+        <ul class="nav-list">
+            <li>
+                <a href="#" class="nav-link active" onclick="openTab(event, 'home-tab')">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link" onclick="openTab(event, 'login-tab')">
+                    Sign In
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link" onclick="openTab(event, 'new-arrivals-tab')">
+                    New Arrivals
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link" onclick="openTab(event, 'collections-tab')">
+                    Collections
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link" onclick="openTab(event, 'checkout-tab')">
+                    Checkout Terminal
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section id="home-tab" class="tab-content active">
+
+            <div class="hero-section">
+                <div class="fallback-hero-frame">
+                    <h2 style="font-family:'Georgia', serif; font-size:32px; letter-spacing:4px; margin-bottom:10px;">
+                        VINTAGE STREETWEAR
+                    </h2>
+
+                    <p style="font-style:italic; color:#555; margin-bottom:20px;">
+                        By Elena - Lynn - Sera
+                    </p>
+
+                    <p style="max-width:600px; margin:0 auto 30px auto; font-size:15px; color:#444;">
+                        Welcome to the Alice's Closet online store.
+                        Sign in to your shopper account, browse our collections,
+                        add items to your cart, and safely process your purchase.
+                    </p>
+
+                    <button
+                        class="shop-btn"
+                        style="max-width:200px; margin:0 auto;"
+                        onclick="openTab(null, 'login-tab')"
+                    >
+                        Enter Gateway
+                    </button>
+                </div>
+            </div>
+
+            <h3
+                class="category-title"
+                style="margin-top:50px; font-size:20px;"
+            >
+                Seasonal Highlights
+            </h3>
+
+            <div
+                class="product-grid"
+                style="grid-template-columns:repeat(2, 1fr); max-width:800px; margin:0 auto;"
+            >
+
+                <div
+                    class="product-card"
+                    onclick="openTab(null, 'new-arrivals-tab')"
+                >
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                            style="max-height:140px;"
+                        >
+                            <path
+                                d="M20,30 L35,20 L40,25 L50,22 L60,25 L65,20 L80,30 L75,45 L68,42 L68,85 L32,85 L32,42 L25,45 Z"
+                                fill="#2B1E19"
+                            />
+                            <path
+                                d="M35,20 Q50,32 65,20 Q50,10 35,20 Z"
+                                fill="#1C1310"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Browse New Arrivals
+                        <span>Fresh drops updated weekly</span>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card"
+                    onclick="openTab(null, 'collections-tab')"
+                >
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                            style="max-height:140px;"
+                        >
+                            <rect
+                                x="25"
+                                y="20"
+                                width="50"
+                                height="60"
+                                rx="4"
+                                fill="#2B1E19"
+                            />
+
+                            <rect
+                                x="35"
+                                y="10"
+                                width="30"
+                                height="15"
+                                rx="8"
+                                fill="#E29B9B"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        View Collections
+                        <span>Exclusive boutique capsule lines</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="login-tab" class="tab-content">
+
+            <h2 class="category-title">
+                Account Gateway
+            </h2>
+
+            <div class="auth-grid-split">
+
+                <div class="form-container">
+
+                    <h3>
+                        Account Login
+                    </h3>
+
+                    <input
+                        type="text"
+                        id="loginUser"
+                        placeholder="Username"
+                    >
+
+                    <input
+                        type="password"
+                        id="loginPass"
+                        placeholder="Password"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="handleLoginSubmit()"
+                    >
+                        Sign In
+                    </button>
+
+                </div>
+
+
+                <div class="form-container">
+
+                    <h3>
+                        Create New Profile
+                    </h3>
+
+                    <input
+                        type="text"
+                        id="regName"
+                        placeholder="Shopper Full Name"
+                    >
+
+                    <input
+                        type="text"
+                        id="regUser"
+                        placeholder="Desired Username"
+                    >
+
+                    <input
+                        type="password"
+                        id="regPass"
+                        placeholder="Desired Password"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="handleRegistrationSubmit()"
+                    >
+                        Register Account
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="new-arrivals-tab" class="tab-content">
+
+            <h2 class="category-title">
+                New Arrivals Collection
+            </h2>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M20,30 L35,20 L40,25 L50,22 L60,25 L65,20 L80,30 L75,45 L68,42 L68,85 L32,85 L32,42 L25,45 Z"
+                                fill="#2B1E19"
+                            />
+
+                            <path
+                                d="M35,20 Q50,32 65,20 Q50,10 35,20 Z"
+                                fill="#1C1310"
+                            />
+
+                            <circle
+                                cx="45"
+                                cy="50"
+                                r="2"
+                                fill="#ff99cc"
+                            />
+
+                            <circle
+                                cx="55"
+                                cy="50"
+                                r="2"
+                                fill="#ff99cc"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        LES Espresso Hoodie
+                        <span>$85.00</span>
+                    </div>
+
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-101"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(101, document.getElementById('qty-101').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M30,15 L70,15 L75,25 L65,25 L65,85 L52,85 L50,45 L48,85 L35,85 L35,25 L25,25 Z"
+                                fill="#E29B9B"
+                                stroke="#2B1E19"
+                                stroke-width="2"
+                            />
+
+                            <rect
+                                x="38"
+                                y="30"
+                                width="8"
+                                height="12"
+                                rx="2"
+                                fill="#c38282"
+                            />
+
+                            <rect
+                                x="54"
+                                y="30"
+                                width="8"
+                                height="12"
+                                rx="2"
+                                fill="#c38282"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Pink Cargo Pants
+                        <span>$95.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-102"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(102, document.getElementById('qty-102').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M30,15 L40,10 L50,15 L60,10 L70,15 L75,45 L65,45 L65,90 L35,90 L35,45 L25,45 Z"
+                                fill="#111111"
+                            />
+
+                            <path
+                                d="M48,15 L48,90 M35,40 L65,40"
+                                stroke="#FFFFFF"
+                                stroke-width="1.5"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Midnight Black Trench
+                        <span>$150.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-103"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(103, document.getElementById('qty-103').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M25,20 L40,15 L50,20 L60,15 L75,20 L80,40 L68,40 L68,85 L32,85 L32,40 L20,40 Z"
+                                fill="#FFFFFF"
+                                stroke="#2B1E19"
+                                stroke-width="2"
+                            />
+
+                            <text
+                                x="50"
+                                y="55"
+                                font-family="Georgia, serif"
+                                font-size="14"
+                                font-weight="bold"
+                                fill="#2B1E19"
+                                text-anchor="middle"
+                            >
+                                LES
+                            </text>
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Boutique Vintage Tee
+                        <span>$45.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-104"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(104, document.getElementById('qty-104').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="collections-tab" class="tab-content">
+
+            <h2 class="category-title">
+                Boutique Collections
+            </h2>
+
+            <div class="product-grid">
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <rect
+                                x="25"
+                                y="20"
+                                width="50"
+                                height="60"
+                                rx="4"
+                                fill="#2B1E19"
+                            />
+
+                            <rect
+                                x="35"
+                                y="10"
+                                width="30"
+                                height="15"
+                                rx="8"
+                                fill="#E29B9B"
+                            />
+
+                            <line
+                                x1="50"
+                                y1="35"
+                                x2="50"
+                                y2="65"
+                                stroke="#FFFFFF"
+                                stroke-width="3"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        LES Luxury Backpack
+                        <span>$100.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-201"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(201, document.getElementById('qty-201').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M15,40 L35,25 L65,25 L85,40 L75,50 L65,40 L65,80 L35,80 L35,40 L25,50 Z"
+                                fill="#E29B9B"
+                            />
+
+                            <circle
+                                cx="50"
+                                cy="55"
+                                r="8"
+                                fill="#FFFFFF"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Knit Sweater
+                        <span>$75.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-202"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(202, document.getElementById('qty-202').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M25,20 L40,12 L50,20 L60,12 L75,20 L80,35 L68,40 L65,85 L35,85 L32,40 L20,35 Z"
+                                fill="#F5F5F5"
+                                stroke="#2B1E19"
+                                stroke-width="2"
+                            />
+
+                            <line
+                                x1="50"
+                                y1="20"
+                                x2="50"
+                                y2="85"
+                                stroke="#2B1E19"
+                                stroke-width="2"
+                            />
+
+                            <circle
+                                cx="50"
+                                cy="35"
+                                r="2"
+                                fill="#2B1E19"
+                            />
+
+                            <circle
+                                cx="50"
+                                cy="48"
+                                r="2"
+                                fill="#2B1E19"
+                            />
+
+                            <circle
+                                cx="50"
+                                cy="61"
+                                r="2"
+                                fill="#2B1E19"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Oxford Button Shirt
+                        <span>$55.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-203"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(203, document.getElementById('qty-203').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M20,55 L30,25 L70,25 L80,55 L65,55 L60,85 L40,85 L35,55 Z"
+                                fill="#2B1E19"
+                            />
+
+                            <path
+                                d="M25,55 L40,55 L42,75 L30,75 Z"
+                                fill="#E29B9B"
+                            />
+
+                            <path
+                                d="M60,55 L75,55 L70,75 L58,75 Z"
+                                fill="#E29B9B"
+                            />
+
+                            <line
+                                x1="30"
+                                y1="25"
+                                x2="70"
+                                y2="25"
+                                stroke="#FFFFFF"
+                                stroke-width="2"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Boutique Retro Shoes
+                        <span>$125.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-204"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(204, document.getElementById('qty-204').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="smooth-rectangle">
+
+                        <svg
+                            class="clothing-svg"
+                            viewBox="0 0 100 100"
+                        >
+                            <path
+                                d="M25,20 L45,15 L55,15 L75,20 L70,45 L60,42 L60,80 L40,80 L40,42 L30,45 Z"
+                                fill="#D7A68A"
+                            />
+
+                            <path
+                                d="M40,42 L35,85 L48,85 L50,50 L52,85 L65,85 L60,42"
+                                fill="#C88E72"
+                            />
+
+                            <line
+                                x1="50"
+                                y1="15"
+                                x2="50"
+                                y2="45"
+                                stroke="#2B1E19"
+                                stroke-width="2"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <div class="price-tag">
+                        Casual Shorts
+                        <span>$50.00</span>
+                    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+                    <input
+                        type="number"
+                        id="qty-205"
+                        value="1"
+                        min="1"
+                        class="qty-field"
+                    >
+
+                    <button
+                        class="shop-btn"
+                        onclick="addToCart(205, document.getElementById('qty-205').value)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+                <div class="product-card">
+
+    <div class="smooth-rectangle">
+
+        <svg class="clothing-svg" viewBox="0 0 100 100">
+
+            <path
+                d="M30,20 L70,20 L65,35 L75,85 L25,85 L35,35 Z"
+                fill="#E29B9B"
+            />
+
+            <path
+                d="M35,35 L65,35"
+                stroke="#2B1E19"
+                stroke-width="2"
+            />
+
+            <line
+                x1="38"
+                y1="45"
+                x2="35"
+                y2="78"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+            <line
+                x1="50"
+                y1="45"
+                x2="50"
+                y2="80"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+            <line
+                x1="62"
+                y1="45"
+                x2="65"
+                y2="78"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+        </svg>
+
+    </div>
+
+    <div class="price-tag">
+        Pink Pleated Skirt
+        <span>$60.00</span>
+    </div>
+                    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+    <input
+        type="number"
+        id="qty-206"
+        value="1"
+        min="1"
+        class="qty-field"
+    >
+
+    <button
+        class="shop-btn"
+        onclick="addToCart(206, document.getElementById('qty-206').value)"
+    >
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product-card">
+
+    <div class="smooth-rectangle">
+
+        <svg class="clothing-svg" viewBox="0 0 100 100">
+
+            <path
+                d="M25,25 L45,20 L55,20 L75,25 L70,50 L60,50 L58,80 L42,80 L40,50 L30,50 Z"
+                fill="#66809A"
+                stroke="#2B1E19"
+                stroke-width="2"
+            />
+
+            <path
+                d="M25,25 L20,55 L42,55 L45,30"
+                fill="#66809A"
+                stroke="#2B1E19"
+                stroke-width="2"
+            />
+
+            <path
+                d="M75,25 L80,55 L58,55 L55,30"
+                fill="#66809A"
+                stroke="#2B1E19"
+                stroke-width="2"
+            />
+
+            <line
+                x1="50"
+                y1="22"
+                x2="50"
+                y2="55"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+        </svg>
+
+    </div>
+
+    <div class="price-tag">
+        Vintage Denim Jorts
+        <span>$65.00</span>
+    </div>
+    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+    <input
+        type="number"
+        id="qty-207"
+        value="1"
+        min="1"
+        class="qty-field"
+    >
+
+    <button
+        class="shop-btn"
+        onclick="addToCart(207, document.getElementById('qty-207').value)"
+    >
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product-card">
+
+    <div class="smooth-rectangle">
+
+        <svg class="clothing-svg" viewBox="0 0 100 100">
+
+            <path
+                d="M35,15 L65,15 L70,30 L62,35 L60,85 L40,85 L38,35 L30,30 Z"
+                fill="#222222"
+            />
+
+            <line
+                x1="50"
+                y1="20"
+                x2="50"
+                y2="80"
+                stroke="#ff99cc"
+                stroke-width="2"
+            />
+
+            <line
+                x1="38"
+                y1="40"
+                x2="62"
+                y2="40"
+                stroke="#ff99cc"
+                stroke-width="1.5"
+            />
+
+        </svg>
+
+    </div>
+
+    <div class="price-tag">
+        Black Flared Leggings
+        <span>$45.00</span>
+    </div>
+    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+    <input
+        type="number"
+        id="qty-208"
+        value="1"
+        min="1"
+        class="qty-field"
+    >
+
+    <button
+        class="shop-btn"
+        onclick="addToCart(208, document.getElementById('qty-208').value)"
+    >
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product-card">
+
+    <div class="smooth-rectangle">
+
+        <svg class="clothing-svg" viewBox="0 0 100 100">
+
+            <path
+                d="M30,25 L70,25 L65,40 L75,82 L25,82 L35,40 Z"
+                fill="#F5D7E3"
+                stroke="#2B1E19"
+                stroke-width="2"
+            />
+
+            <path
+                d="M27,78 Q50,88 73,78"
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="4"
+            />
+
+            <circle
+                cx="42"
+                cy="45"
+                r="2"
+                fill="#ff99cc"
+            />
+
+            <circle
+                cx="58"
+                cy="45"
+                r="2"
+                fill="#ff99cc"
+            />
+
+        </svg>
+
+    </div>
+
+    <div class="price-tag">
+        Lace Mini Skirt
+        <span>$55.00</span>
+    </div>
+    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+    <input
+        type="number"
+        id="qty-209"
+        value="1"
+        min="1"
+        class="qty-field"
+    >
+
+    <button
+        class="shop-btn"
+        onclick="addToCart(209, document.getElementById('qty-209').value)"
+    >
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product-card">
+
+    <div class="smooth-rectangle">
+
+        <svg class="clothing-svg" viewBox="0 0 100 100">
+
+            <path
+                d="M28,20 L72,20 L68,35 L75,85 L25,85 L32,35 Z"
+                fill="#52718A"
+                stroke="#2B1E19"
+                stroke-width="2"
+            />
+
+            <line
+                x1="32"
+                y1="35"
+                x2="68"
+                y2="35"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+            <line
+                x1="38"
+                y1="40"
+                x2="35"
+                y2="78"
+                stroke="#FFFFFF"
+                stroke-width="1.5"
+            />
+
+            <line
+                x1="62"
+                y1="40"
+                x2="65"
+                y2="78"
+                stroke="#FFFFFF"
+                stroke-width="1.5"
+            />
+
+        </svg>
+
+    </div>
+
+    <div class="price-tag">
+        Low-Rise Denim Skirt
+        <span>$70.00</span>
+    </div>
+    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+    <input
+        type="number"
+        id="qty-210"
+        value="1"
+        min="1"
+        class="qty-field"
+    >
+
+    <button
+        class="shop-btn"
+        onclick="addToCart(210, document.getElementById('qty-210').value)"
+    >
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product-card">
+
+    <div class="smooth-rectangle">
+
+        <svg class="clothing-svg" viewBox="0 0 100 100">
+
+            <path
+                d="M35,15 L65,15 L70,30 L62,35 L60,85 L40,85 L38,35 L30,30 Z"
+                fill="#E29B9B"
+            />
+
+            <path
+                d="M45,20 Q50,30 55,20"
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+            <path
+                d="M45,30 Q50,40 55,30"
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+        </svg>
+
+    </div>
+
+    <div class="price-tag">
+        Pink Ribbon Leggings
+        <span>$50.00</span>
+    </div>
+    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+    <input
+        type="number"
+        id="qty-211"
+        value="1"
+        min="1"
+        class="qty-field"
+    >
+
+    <button
+        class="shop-btn"
+        onclick="addToCart(211, document.getElementById('qty-211').value)"
+    >
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product-card">
+
+    <div class="smooth-rectangle">
+
+        <svg class="clothing-svg" viewBox="0 0 100 100">
+
+            <path
+                d="M25,25 L43,20 L50,25 L57,20 L75,25 L80,55 L62,55 L60,82 L40,82 L38,55 L20,55 Z"
+                fill="#6D5846"
+                stroke="#2B1E19"
+                stroke-width="2"
+            />
+
+            <rect
+                x="27"
+                y="37"
+                width="14"
+                height="12"
+                fill="#8C725B"
+            />
+
+            <rect
+                x="59"
+                y="37"
+                width="14"
+                height="12"
+                fill="#8C725B"
+            />
+
+            <line
+                x1="50"
+                y1="25"
+                x2="50"
+                y2="55"
+                stroke="#FFFFFF"
+                stroke-width="2"
+            />
+
+        </svg>
+
+    </div>
+
+    <div class="price-tag">
+        Vintage Cargo Jorts
+        <span>$68.00</span>
+    </div>
+    <div class="size-options">
+    <button type="button" class="size-btn active" onclick="selectSize(101, 'XS', this)">XS</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'S', this)">S</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'M', this)">M</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'L', this)">L</button>
+    <button type="button" class="size-btn" onclick="selectSize(101, 'XL', this)">XL</button>
+</div>
+
+    <input
+        type="number"
+        id="qty-212"
+        value="1"
+        min="1"
+        class="qty-field"
+    >
+
+    <button
+        class="shop-btn"
+        onclick="addToCart(212, document.getElementById('qty-212').value)"
+    >
+        Add to Cart
+    </button>
+
+</div>
+
+            </div>
+        </section>
+
+
+        <section id="checkout-tab" class="tab-content">
+
+            <h2 class="category-title">
+                Checkout
+            </h2>
+
+            <p
+                style="
+                    text-align:center;
+                    font-family:'Georgia', serif;
+                    color:#555;
+                "
+            >
+                Please log in to review your checkout details.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <div id="msg-box"></div>
+
+
+
+</body>
+</html>
