@@ -88,6 +88,7 @@ function handleLoginSubmit() {
     login(enteredUser, enteredPass);
 }
 
+
 function handleRegistrationSubmit() {
     const newName = document.getElementById("regName").value;
     const newUsername = document.getElementById("regUser").value;
@@ -452,6 +453,10 @@ function updateScreen() {
                     ">
                         <strong>Subtotal:</strong>
                         <span>$${subtotal.toFixed(2)}</span>
+                        <strong>Tax:</strong>
+                        <span>$${(subtotal * 0.13).toFixed(2)}</span>
+                        <strong>Total:</strong>
+                        <span>$${(subtotal + (subtotal * 0.13)).toFixed(2)}</span>
                     </p>
 
                     <input
@@ -467,6 +472,7 @@ function updateScreen() {
                             font-size:13px;
                         "
                     >
+
 
                     <button
                         onclick="checkout(document.getElementById('promoInput').value)"
