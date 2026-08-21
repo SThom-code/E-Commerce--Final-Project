@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -237,4 +238,35 @@ body {
 .shop-btn:hover {
     background: #ff99cc;
     color: #333333;
+}
+.size-options {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.size-btn {
+    background: #FFFFFF;
+    border: 1px solid #333333;
+    color: #333333;
+    width: 38px;
+    height: 32px;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.size-btn:hover {
+    background: #fddbe8;
+}
+
+.size-btn.active {
+    background: #ff99cc;
+    color: #FFFFFF;
+    border-color: #ff99cc;
 }
