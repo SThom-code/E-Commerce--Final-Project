@@ -67,6 +67,20 @@ const inventory = [
 
 let currentUser = null;
 
+const selectedSizes = {};
+
+function selectSize(productId, size, button) {
+    selectedSizes[productId] = size;
+
+    const buttons = button.parentElement.querySelectorAll('.size-btn');
+
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+}
+
 function handleLoginSubmit() {
     const enteredUser = document.getElementById("loginUser").value;
     const enteredPass = document.getElementById("loginPass").value;
@@ -103,7 +117,7 @@ function signUp(newName, newUsername, newPassword) {
         newUsername,
         newPassword,
         newName,
-        200.00
+        700.00
     );
 
     users.push(newUser);
