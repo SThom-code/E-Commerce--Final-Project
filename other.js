@@ -118,7 +118,7 @@ function signUp(newName, newUsername, newPassword) {
         newUsername,
         newPassword,
         newName,
-        700.00
+        500.00
     );
 
     users.push(newUser);
